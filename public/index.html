@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Funny Lie Generator 🤥</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🤥 Funny Lie Generator</h1>
+      <div class="theme-switcher">
+        <button onclick="setTheme('dark')">🌙 Dark</button>
+        <button onclick="setTheme('gay')">🌈 Gay</button>
+        <button onclick="setTheme('scary')">👻 Scary</button>
+        <button onclick="setTheme('girl')">💖 Girl</button>
+      </div>
+      <select id="situation">
+        <option value="">-- Select a situation --</option>
+
+        <option value="late_reply">Late reply</option>
+        <option value="missed_call">Missed a call</option>
+        <option value="missed_class">Missed class</option>
+        <option value="late_submission">Late assignment</option>
+        <option value="work_issue">Work issue</option>
+        <option value="office_deadline">Office deadline missed</option>
+
+        <option value="relationship">Relationship excuse</option>
+        <option value="missed_date">Missed a date</option>
+
+        <option value="parents">Parents excuse</option>
+        <option value="family_function">Family function</option>
+
+        <option value="friends">Friends / plans</option>
+        <option value="birthday">Forgot birthday</option>
+
+        <option value="exam">Exam excuse</option>
+        <option value="gym">Gym excuse</option>
+        <option value="hostel_college">Hostel / college</option>
+      </select>
+
+      <button onclick="getLie()">Generate Lie</button>
+
+      <p id="lie"></p>
+    </div>
+    <div id="sparkle-container"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

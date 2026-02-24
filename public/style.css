@@ -1,0 +1,189 @@
+:root {
+  --bg: #0f0f0f;
+  --card: #181818;
+  --text: #ffffff;
+  --accent: #ff4d6d;
+  --box: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--bg), #1c1c1c);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: var(--card);
+  padding: 30px 35px;
+  width: 380px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #252525;
+  color: #fff;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  background: #ff6b85;
+  transform: scale(1.03);
+}
+
+#lie {
+  margin-top: 22px;
+  padding: 14px;
+  background: var(--box);
+  border-radius: 10px;
+  min-height: 50px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+body.gay {
+  --bg: #ff0080;
+  --card: #111;
+  --text: #fff;
+  --accent: linear-gradient(
+    90deg,
+    red, orange, yellow, green, cyan, blue, violet
+  );
+  --box: #000;
+}
+
+body.gay button {
+  background: var(--accent);
+  color: black;
+  font-weight: bold;
+}
+
+/* 👻 SCARY MODE */
+body.scary {
+  --bg: #000000;
+  --card: #0b0b0b;
+  --text: #ff4d4d;
+  --accent: #8b0000;
+  --box: #140000;
+}
+
+body.scary #lie {
+  font-family: "Courier New", monospace;
+  letter-spacing: 1px;
+}
+
+/* 💖 GIRL MODE */
+body.girl {
+  --bg: #ffe6f0;
+  --card: #fff0f6;
+  --text: #970055;
+  --accent: #ff85c0;
+  --box: #ffd6e8;
+}
+
+body.girl select,
+body.girl button {
+  color: #ffffff;
+}
+.theme-switcher {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.theme-switcher button {
+  flex: 1;
+  margin: 0 4px;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+/* ✨ Sparkles */
+#sparkle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, white 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatUp 4s linear forwards;
+  opacity: 0.9;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
+/* 💖 Girl Mode Animations */
+body.girl .container {
+  animation: girlPop 0.6s ease;
+}
+
+@keyframes girlPop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+body.girl * {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.3s ease;
+}
+body.girl #lie {
+  font-style: italic;
+}
