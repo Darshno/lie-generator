@@ -3,7 +3,7 @@ import cors from "cors";
 import db from "./database.js";
 
 const app = express();
-const PORT = 3000;
+
 
 app.use(cors());
 app.use(express.json());
@@ -145,6 +145,8 @@ app.get("/analytics", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
